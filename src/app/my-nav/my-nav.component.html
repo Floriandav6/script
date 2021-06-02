@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<header>
+  <!-- ici donc on crée une classe content pour définir la largeur du contenu du header qui sera
+     différente de celui du header -->
+  <div class="content">
+    <!-- on crée ensuite les deux titres -->
+    <!-- ici on met un href vers la page d'acceuil pour que le logo soit donc cliquable et
+ramène à la page d'acceuil -->
+
+    <h1><a routerLink="/"> La vie est en </a> </h1>
+    <h2 class="title2"> <a routerLink="/">COULEURS </a> </h2>
+
+    <!-- navigation de niveau 1 avec un current et survol -->
+    <nav>
+      <ul>
+        <!-- le current se trouve ici sur la page d'acceuil -->
+        <li ><a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{'exact': true}">COULEURS</a></li>
+        <li ><a [routerLink]="['/bleu']" routerLinkActive="active" [routerLinkActiveOptions]="{'exact': true}">BLEU</a></li>
+        <li ><a [routerLink]="['/jaune']" routerLinkActive="active" [routerLinkActiveOptions]="{'exact': true}">JAUNE</a></li>
+        <li ><a [routerLink]="['/rouge']" routerLinkActive="active" [routerLinkActiveOptions]="{'exact': true}">ROUGE</a></li>
+        <li ><a [routerLink]="['/vert']" routerLinkActive="active" [routerLinkActiveOptions]="{'exact': true}">VERT</a></li>
+        <li ><a [routerLink]="['/contact']" routerLinkActive="active" [routerLinkActiveOptions]="{'exact': true}">CONTACT</a></li>
+      </ul>
+
+
+
+    </nav>
+  </div>
+
+</header>
+</body>
+</html>

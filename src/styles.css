@@ -1,0 +1,648 @@
+/* ici on a les 3 fonts utilisées
+font-family: 'Great Vibes', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;  */
+
+/* html et body à 0 pour éviter les bords blancs sur le navigateur */
+
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+/* ici le width est de 100% pour le main afin que le background du header ainsi
+   que le footer prenne toute la largeur du navigateur */
+main{
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+
+}
+/* définitions des largeurs de colonnes ainsi que des gouttières avec un margin:O important
+pour la dernière pour qu'elle prenne dessus sur les instructions données à .col car il n'y
+a pas de gouttière à droite de la dernière colonne */
+
+.col{
+  float: left;
+  margin-right: 20px;
+}
+
+.last{
+  margin-right: 0 !important;
+}
+
+.col-1-12{
+  width: 75px;
+}
+
+.col-2-12{
+  width: 170px;
+}
+
+.col-3-12{
+  width: 265px;
+}
+
+.col-4-12{
+  width: 360px;
+}
+.col-5-12{
+  width: 455px;
+}
+
+.col-6-12{
+  width: 550px;
+}
+
+.col-8-12{
+  width: 740px;
+}
+
+.col-9-12{
+  width: 835px;
+}
+
+.col-12-12{
+  width: 1120px;
+}
+/* utilisation du clear pour nettoyer le float */
+.clear{
+  clear: both;
+}
+/* Header */
+
+header {
+  margin-top: -30px;
+  background-color: #f6f6f8;
+  width: 100%;
+  height: 120px;
+}
+
+/* le contenu du footer et du header eux ont une largeur de 1120px qui est celle du main
+  et qui est donc centrée dans le navigateur par le biais des margins */
+
+.content{
+  width: 1120px;
+  margin: 0 auto;
+}
+
+/* on définit la taille , la position et la police des titres */
+h1{
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  margin-bottom: -100px;
+  padding-top: 25px;
+  z-index: 100;
+  position: relative;
+
+
+
+}
+/* on retire les décorations venant du lien ajouté aux deux titres */
+
+h1 a {
+  text-decoration: none;
+  color: #3b3b3b ;
+
+
+}
+/* on définit la taille , la position et la police des titres */
+
+h2{
+  font-family: 'Oswald', sans-serif;
+
+
+}
+/* on retire les décorations venant du lien ajouté aux deux titres */
+h2 a {
+  text-decoration: none;
+  color: #fd0135;
+}
+/* ici on a mis une classe au H2 car le h2 est présent aussi dans la section et donc pour pouvoir modifier seulement le
+h2 présent dans le header */
+
+
+.title2{
+  width: 180px;
+  font-size: 35px;
+  margin-top: 75px;
+  margin-left: 2px;
+
+
+}
+
+/* navigation niveau 1 */
+
+/* on définit la taille et la position de la nav via un text-align right et des margins */
+
+nav {
+  text-align: right;
+  font-size: 17px;
+  margin-top: -56.5px;
+
+}
+/* ici on met également un hover pour le survol et un current sur la page sur laquelle nous sommes */
+nav .current a,nav li a:hover{
+  color:#fd0135 ! important ;
+}
+
+nav .active {
+  color:#fd0135 ! important ;
+}
+
+
+
+nav li {
+  display: inline;
+}
+/* On retire les éléments de décorations de listes et on vient directement modifier la police et la couleur des textes de la nav */
+nav li a {
+  color: #3b3b3b ;
+  text-decoration: none;
+  font-family: 'Lato' , sans-serif ;
+  font-weight: 500;
+}
+
+
+
+nav li {
+  display: inline;
+  padding-right: 30px;
+  position: relative;
+}
+
+/* Fin header */
+
+
+
+/* Section */
+
+/* Page acceuil */
+
+/* on retire toutes les décorations venant des href */
+
+a {
+  text-decoration: none;
+}
+/* on définit ici la position et la police du titre présent en haut de ma section , titre qui sera présent sans changement sur
+toutes mes pages, ici c'est via la classe .cocktail car c'est également un h2 auquel j'ai donné une classe pour pouvoir modifier ce titre
+sans modifier celui présent dans le header */
+.cocktail{
+  display: inline;
+  font-weight: 400;
+  letter-spacing: 20px;
+  font-size: 30px;
+  margin-left: 2px;
+}
+
+/* Ici on définit les titres latérales présents sur toutes mes pages, h3 est pour la page d'acceuil et h4 pour les autres pages */
+
+/* on définit la police et la position avec un text-align center pour le mettre au milieu de ma balise vu que via les br
+les lettres sont les unes en dessous de l'autre
+ */
+h3{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400 ;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 56px;
+
+
+}
+/* on définit la police et la position avec un text-align center pour le mettre au milieu de ma balise vu que via les br
+les lettres sont les unes en dessous de l'autre et sur le h4 on rajoute le position : fixed pour que le titre descende en
+même temps que le scroll
+ */
+
+h4{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400 ;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+  position: fixed;
+
+
+
+}
+/* ici je crée un disclaimer concernant l'alcool je mets donc une plus grosse font size et un letter spacing pour que le texte prenne pas mal
+de places et je le centre ( en plus de définir la couleur, la police et la position )
+ */
+
+
+.alcool1{
+  font-family: 'Lato', sans-serif;
+  color: #fd0135;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: center;
+  letter-spacing: 10px;
+  margin-top: -80px;
+  padding-bottom: 40px;
+
+}
+/* ici on définit les 3 textes présents dans la page d'acceuil, je les mets au centre de leur div en plus de définir la police  */
+
+
+.text1{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: center;
+  width:360px ;
+  height: 120px;
+  margin-top: 50px;
+
+
+}
+/* ici j'ai donné une id à la div dans la quelle se trouve le texte car il y'avait déjà la classe texte1 , ça me permet de remonter
+seulement ce texte là */
+#rectangle{
+  margin-top: -280px;
+}
+/* ici je modifie toutes les images présents en page d'acceuil, je leur donne en plus d'un taille proportionelle, une position relative
+et un z-index pour pouvoir par la suite mettre un mot devant et derrière
+ */
+.fruit{
+  width: 100%;
+  height: 200px;
+  z-index: 100;
+  position: relative;
+  border: 1px solid  #f6f6f8;
+
+
+}
+/* ici je mets un hover pour que lorsque l'on passe sur les photos il y'ait une opacity et un aggrandissement d'image */
+.fruit:hover{
+  opacity: 0.6;
+  transform:scale(1.1)
+}
+/* la seule différence entre le text2 et le text3 c'est le z-index inférieur à 100 pour le text3 pour mettre sous la photo
+et supérieur à 100 pour le text2 pour apparaître au dessus de la photo */
+
+.text2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 65px;
+  text-align: center;
+  margin-top: -335px;
+  color: #3b3b3b;
+  z-index: 101;
+  position: relative;
+
+}
+.text3{
+  font-family: 'Oswald', sans-serif;
+  font-size: 65px;
+  text-align: center;
+  margin-top: -335px;
+  color: #3b3b3b;
+  position: relative;
+  z-index: 99;
+
+}
+
+/* Page bleu */
+
+/* j'ai la même classe pour toutes les photos présentes sur ma page bleu , je définis donc une taille proportionelle avec une
+petite bordure et un margin top léger */
+
+.berry{
+  max-width: 100%;
+  height: auto ;
+  margin-top: 20px;
+  border: 1px solid  #f6f6f8;
+}
+/* Pour le text4 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align justify */
+.text4{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: justify;
+  font-size: 20px;
+}
+/* Pour le text4 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align center */
+.text5{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: center;
+  font-size: 20px;
+
+}
+/* Page jaune */
+/* j'ai la même classe pour toutes les photos présentes sur ma page jaune , je définis donc une taille proportionelle avec une
+petite bordure et un margin top léger */
+
+.lemon{
+  max-width: 100%;
+  height: auto ;
+  margin-top: 20px;
+  border: 1px solid  #f6f6f8;
+}
+/* Pour le text6 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align center */
+.text6{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: center;
+  font-size: 20px;
+
+
+
+}
+/* On crée un texte qui sera présent au centre de la page j'utilise plus ou moins le même principe que pour le disclaimer,
+ c'est pourquoi j'ai utilisé la classe alcool2, je définis donc un letter spacing pour que ça soit bien visible avec un rappel de couleur */
+.alcool2{
+  font-family: 'Lato', sans-serif;
+  color: #fd0135;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 10px;
+  margin-top: 20px;
+
+
+
+}
+/* Pour le text7 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align right pour l'alignement à droite, contre la photo */
+.text7{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: right;
+  font-size: 20px;
+
+
+
+}
+/* Pour le text8 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align left pour l'alignement à gauche, contre la photo */
+
+.text8{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: left;
+  font-size: 20px;
+
+
+
+}
+/* Page rouge */
+/* classe pour une seule photo avec une taille proportionelle et une border  */
+.straw{
+  max-width: 100%;
+  height: auto ;
+  border: 2px solid  #f6f6f8;
+  margin-top: 40px;
+
+
+}
+/* Pour le text9 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align justify */
+.text9{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: justify;
+  font-size: 20px;
+  margin-top: 40px;
+}
+/* ici j'ai deux photos avec lesquelles je fais un "montage" , j'éffectue une rotation différente pour les les deux photos,
+je n'ai pas besoin de mettre un z-index car vu l'ordre, ma deuxième photo passe au dessus de la 1ère comme je le souhaitais
+*/
+.straw1{
+  max-width: 100%;
+  height: auto ;
+  border: 2px solid  #f6f6f8;
+  transform: rotate(-15deg);
+  margin-top: -40px;
+
+
+
+
+}
+.straw2{
+  max-width: 100%;
+  height: auto ;
+  border: 2px solid #f6f6f8 ;
+  margin-left: -40px;
+  transform: rotate(10deg);
+  margin-top: -20px;
+
+
+
+
+
+}
+/* Pour les text10 et 11 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align left pour le text10 et right pour le text11 pour créer un effet de l'un face à l'autre  */
+.text10{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: left;
+  font-size: 20px;
+
+
+}
+
+.text11{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  text-align: right;
+  font-size: 20px;
+
+
+}
+
+/* Page verte */
+
+
+/* ici j'ai trois photos avec lesquelles je fais un "montage" , j'éffectue une rotation différente pour les les trois photos,
+j'ai donc une position différente pour chaque photo sur lesquels je mets une position absolute et un z-index pour les empiler
+comme je le souhaite j'ai donc ma deuxième photo qui passe au dessus des 2 autres, chaque photo a une taille proportionelle
+
+*/
+.kiwi1{
+  max-width: 265px;
+  height: auto ;
+  border: 1px solid  #f6f6f8;
+  z-index: 105;
+  transform: rotate(-15deg);
+  margin-top: 60px;
+  position: absolute;
+  margin-left: 20px;
+
+
+}
+.kiwi2{
+  max-width: 265px;
+  height: auto ;
+  border: 1px solid  #f6f6f8;
+  z-index: 106;
+  transform: rotate(15deg);
+  margin-top: 50px;
+  position: absolute;
+  margin-left: 270px;
+
+
+}
+.kiwi3{
+  max-width: 265px;
+  height: auto ;
+  border: 1px solid  #f6f6f8;
+  z-index: 105;
+  transform: rotate(-5deg);
+  margin-top: 40px;
+  position: absolute;
+  margin-left: 510px;
+
+}
+/* Pour le text12 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align justify */
+
+.text12{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  font-size: 20px;
+  text-align: justify;
+
+
+}
+/* ici j'ai un dropcap pour changer la couleur uniquement du mot "smoothie" */
+.dropcap1{
+  color: #8aaa06;
+}
+/* Pour le text13 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align left */
+.text13{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 30px;
+
+
+}
+/* Pour le text14 je définis de manière simple et classique la police ( taille , couleur ) et la position dans la div via
+un text-align center */
+.text14{
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+
+
+}
+/* On crée un texte qui sera présent au centre de la page j'utilise plus ou moins le même principe que pour le disclaimer et
+alcool2 , c'est pourquoi j'ai utilisé la classe alcool3, je définis donc un letter spacing pour que ça soit bien visible avec
+ un rappel de couleur */
+
+.alcool3{
+  font-family: 'Lato', sans-serif;
+  color: #fd0135;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: center;
+  letter-spacing: 10px;
+  margin-top: 60px;
+
+
+}
+/* Fin section */
+
+/* contact */
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 40px;
+  border: 1px solid #fd0135;
+  height: 450px;
+  width: 500px;
+
+}
+form{
+  width: 400px;
+  height: auto;
+  font-family: 'Lato',sans-serif ;
+  opacity: 0.8;
+
+}
+
+input[type=text], select, textarea {
+  width: 500px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical ;
+  font-family: 'Lato', sans-serif ;
+}
+
+
+input[type=submit] {
+  background-color:#fd0135;
+  color: white;
+  padding: 12px 20px;
+  border-color:  #fd0135;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif ;
+
+}
+
+/* ici comme pour la navigation on met une modification de couleur quand on passe sur
+le bouton envoyer
+ */
+input[type=submit]:hover {
+  background-color: #e83933;
+}
+
+
+/* Footer */
+
+/* le contenu du footer et du header eux ont une largeur de 1060px qui est celle du main
+  et qui est donc centrée dans le navigateur par le biais des margins */
+
+
+
+footer {
+  background-color: #f6f6f8;
+  height: 50px;
+  text-align: left;
+  padding-top: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #3b3b3b;
+  font-size: 19px;
+  margin-top: 140px;
+  float: left ;
+  position: relative; bottom: 0;
+  width: 100%;
+
+}
+/* ici on a mis une classe pour les footers des 4 pages de couleurs car la position n'est pas la même vu la section de la page d'acceuil
+on modifie donc un via un margin top uniquement pour ces 4 pages
+ */
+
+
+/* la div contenant le p du texte présent dans le footer ayant déja une classe (content) on donne donc une id différente forcément à chaque
+page que je vais appeler tous ensemble pour modifier la position
+ */
+.copyright{
+  margin-top: -25px;
+
+
+}
+/* ici je modifie la couleur de mon mail pour attirer plus l'oeil du lecteur et cliquer dessus */
+
+.mail{
+  color: #fd0135;
+
+}
+
+
+/* Fin footer */
+
+

@@ -1,0 +1,106 @@
+<html>
+<body>
+
+<main>
+  <section>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <!-- titre h2 avec une classe pour lui donner des instructions différentes du h2 présent dans le header -->
+    <div class="col col-12-12 last">
+      <H2 class="cocktail"> COCKTAILS DE FRUITS </H2>
+    </div>
+    <div class="clear"> </div>
+    <div>
+      <!-- un deuxième titre qui changera en fonction de la page avec <br> pour le renvoi à la ligne, fraise ici -->
+      <div class="col col-1-12">
+        <h4>F<bR>R<br>A<br>I<br>S<br>E<br> </h4>
+        <p> </p>
+      </div>
+      <!-- ici la div créée est de 6 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où
+      je mets ma balise p afin de mieux la manipuler dans mon css -->
+      <div class="col col-6-12">
+        <div class="text9">
+          <p> A l'arrivée du printemps, la fraise fait son apparition sur nos étals pour le bonheur des plus gourmands.
+            Ce petit fruit rouge est riche en vitamines et minéraux et possède de nombreux bienfaits pour la santé.
+            On la consomme généralement en dessert, crue avec du sucre ou de la chantilly, mais elle se marie également
+            très bien avec des salades pour un mélange sucré/salé. A sa récolte, la fraise est un petit fruit de couleur
+            rouge vif avec de petits grains et un pédoncule vert.</p>
+        </div>
+      </div>
+      <!-- chaque image a également une classe pour la manipuler dans le css-->
+
+      <!-- je crée donc ici une div de 5 colonnes pour y intégrer une image -->
+      <div class="col col-5-12 last">
+        <img src="assets/images/straw1.jpg" alt="straw" class="straw">
+      </div>
+
+
+
+    </div>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <div class="clear"> </div>
+    <div *ngFor="let creation of creations; let i = index">
+      <div class="col col-1-12">
+        <p> </p>
+      </div>
+      <!-- je crée donc ici une div de 3 colonnes pour y intégrer une image -->
+      <div class="col col-3-12">
+        <img src="{{pathIMG+creation.image}}" alt="straw2" class="straw2" [ngClass]="i%2 === 0 ? '' : 'strawi'">
+      <!--image-->
+      </div>
+      <!-- ici la div créée est de 2 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où
+      je mets ma balise p afin de mieux la manipuler dans mon css -->
+      <div class="col col-2-12">
+        <div class="text10">
+          <!-- title -->
+           <div [ngClass]="i%2 === 0 ? '' : 'textstraw1'">{{creation.title}}<br>
+          </div>
+            <!-- link-->
+            <br>
+          <p [ngClass]="i%2 === 0 ? '' : 'textstraw2'">{{creation.link}}</p>
+
+        </div>
+      </div>
+      <!-- div entre les deux recettes pour créer un espace -->
+      <div class="col col-1-12">
+        <p> </p>
+      </div>
+      <!-- ici la div créée est aussi de 2 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où
+      je mets ma balise p afin de mieux la manipuler dans mon css -->
+
+      <div class="col col-2-12 last">
+      </div>
+
+    </div>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <div class="clear"> </div>
+    <div>
+      <div class="col col-2-12">
+        <p> </p>
+      </div>
+      <!-- On crée un texte qui sera présent dans chaques pages que je met au centre via 1 div de 2 colonnes vide
+      de chaque coté de mon texte , il s'agit d'un disclaimer concernant l'abus d'alcool vu que je parle d'alcool sur mon site -->
+      <div class="col col-8-12">
+        <div class="alcool2">
+          <p> ATTENTION L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ </p>
+        </div>
+      </div>
+
+      <div class="col col-2-12 last">
+        <p> </p>
+      </div>
+    </div>
+
+    <div class="clear"> </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<body>
+<main>
+  <section>
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <!-- titre h2 avec une classe pour lui donner des instructions différentes du h2 présent dans le header -->
+    <div class="col col-12-12 last">
+      <H2 class="cocktail"> COCKTAILS DE FRUITS </H2>
+    </div>
+
+    <div class="clear"> </div>
+    <div>
+      <!-- un deuxième titre qui changera en fonction de la page avec <br> pour le renvoi à la ligne, myrtille ici-->
+      <div class="col col-1-12">
+        <h4>M<bR>Y<br>R<br>T<br>I<br>L<br>L<br>E<br> </h4>
+        <p> </p>
+      </div>
+      <!-- chaque image a également une classe pour la manipuler dans le css-->
+      <!-- je crée donc ici une div de 3 colonnes pour y intégrer une image -->
+      <div class="col col-3-12">
+        <img src="assets/images/myrtille.jpg" alt="berry1" class="berry">
+      </div>
+      <!-- ici la div crée est de 8 colonnes afin de pouvoir y intégrer tout mon texte ( utilisation de br pour le
+      renvoi à la ligne ) je crée une div dans la div où je mets ma balise p afin de mieux la manipuler dans mon css -->
+      <div class="col col-8-12 last">
+        <div class="text4">
+          <p> Tout d'abord, petite introduction de cette baie peu populaire: <br>
+            <br>
+            Ce petit fruit sauvage qui fait le bonheur des cueilleurs à la fin de l'été
+            renferme une pulpe gorgée de jus, aigre-douce et légèrement astringente ;
+            elle fait sourire les enfants lorsqu'elle
+            colore de violet leur langue et leurs petites quenottes.  Cette petite baie a des bienfaits inconnus par certains,
+            elle stimule la vision nocturne, elle lutte également contre le vieillissement cellulaire.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="clear"> </div>
+    <!-- div pour créer un espace -->
+
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+
+    <div class="clear"> </div>
+    <!-- je ne souhaite pas centrer ce contenu-ci je crée donc une div vide de 2 colonnes au début et une div vide de
+    1 colonne à la fin -->
+    <div *ngFor="let creation of creations">
+      <div class="col col-2-12">
+        <p> </p>
+      </div>
+      <!-- création d'une div de 6 colonnes pour y intégrer du texte , je crée donc une div dans la div pour y mettre la
+      balise p (br pour renvoi à la ligne) -->
+
+      <div class="col col-6-12">
+        <div class="text5">
+          <!-- titre -->
+          <p>
+            {{ creation.title }}<br>
+            <br>
+            <!-- link -->
+            {{creation.link}}
+          </p>
+        </div>
+      </div>
+      <!-- je crée donc ici une div de 3 colonnes pour y intégrer une image -->
+
+      <div class="col col-3-12 ">
+        <!-- image-->
+        <img src="{{pathIMG+creation.image}}" alt="berry2" class="berry">
+
+      </div>
+      <div class="col col-1-12 last">
+
+      </div>
+    </div>
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <div class="clear"> </div>
+    <!-- je ne souhaite pas centrer ce contenu-ci non-plus je crée donc une div vide de 1 colonne au début et une div vide de
+    2 colonnes à la fin -->
+
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <div class="clear"> </div>
+    <div>
+      <div class="col col-2-12">
+        <p> </p>
+      </div>
+      <!-- On crée un texte qui sera présent dans chaques pages que je met au centre via 1 div de 2 colonnes vide
+      de chaque coté de mon texte , il s'agit d'un disclaimer concernant l'abus d'alcool vu que je parle d'alcool sur mon site -->
+
+      <div class="col col-8-12">
+        <div class="alcool2">
+          <p> ATTENTION L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ </p>
+        </div>
+      </div>
+
+      <div class="col col-2-12 last">
+        <p> </p>
+      </div>
+    </div>
+
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+<body>
+
+<main>
+  <section>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <!-- titre h2 avec une classe pour lui donner des instructions différentes du h2 présent dans le header -->
+    <div class="col col-12-12 last">
+      <H2 class="cocktail"> COCKTAILS DE FRUITS </H2>
+    </div>
+    <div class="clear"> </div>
+
+    <div>
+      <!-- un deuxième titre qui changera en fonction de la page avec <br> pour le renvoi à la ligne , Kiwi ici -->
+      <div class="col col-1-12">
+        <h4>K<bR>I<br>W<br>I<br> </h4>
+        <p> </p>
+      </div>
+      <!-- ici je crée un div de 9 colonnes dans lesquels j'intègre 3 photos, et je vais dans le css choisir les dimensions
+      et les positions des images, c'est pourquoi chaque photo a une classe différente -->
+
+      <div class="col col-9-12">
+        <img src="assets/images/kiwi2.jpg" alt="kiwi1" class="kiwi1">
+        <img src="assets/images/kiwi1.jpg" alt="kiwi2" class="kiwi2">
+        <img src="assets/images/greencocktail.jpg" alt="kiwi3" class="kiwi3">
+        <p> </p>
+      </div>
+      <!-- ici la div créée est de 2 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où
+      je mets ma balise p afin de mieux la manipuler dans mon css, j'ai également span sur le mot smoothie pour via le css
+      pouvoir modifier ce mot la séparément, le span a donc une classe pour permettre cela -->
+      <div class="col col-2-12 last">
+        <div class="text12">
+          <p> Malheureusement, je n'ai pas trouvé de cocktail au kiwi qui gustativement, vaille le coup d'être partagé.
+            Je vous proposerai donc un <span class="dropcap1">smoothie</span>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col col-12-12 last">
+      <!-- On crée un texte qui sera présent au centre de la page  via 1 div de 2 colonnes vide de chaque coté de mon texte
+        j'utilise plus ou moins le même principe que pour le disclaimer et que le texte 1+1 gratuit sur la page jaune,
+        c'est pourquoi j'ai utilisé la classe alcool3 -->
+      <div class="alcool3">
+        <p> SANS ALCOOL</p>
+      </div>
+    </div>
+
+
+    <div class="clear"> </div>
+    <div>
+      <div class="col col-1-12">
+        <p> </p>
+      </div>
+      <!-- ici la div créée est de 2 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où
+       je mets ma balise p afin de mieux la manipuler dans mon css -->
+      <div class="col col-6-12">
+        <div class="text13">
+          <p> Petite introduction habituelle au fruit: <br>
+            <br>
+            Sa couleur marron, sa peau duveteuse qui contraste avec sa chaire le plus souvent verte et blanche.
+            Son goût est sucré et légèrement acidulé. Il se déguste tout simplement cru, à la cuillère ou incorporé dans des desserts.
+            Il s'agit d'un fruit très vitaminé. Le kiwi est aussi appelé groseille de Chine. On trouve le kiwi européen
+            de novembre à mai le restant de l'année, il s'agit de kiwis importés de Nouvelle-Zélande.</p>
+        </div>
+      </div>
+      <div class="col col-1-12">
+        <p> </p>
+      </div>
+      <!-- ici la div créée est de 2 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où
+       je mets ma balise p afin de mieux la manipuler dans mon css -->
+      <div class="col col-4-12 last" *ngFor="let creation of creations">
+        <div class="text14">
+          <!-- title -->
+          <p> {{creation.title}}<br>
+            <!-- link -->
+            <br>
+            {{creation.link}}
+          </p>
+        </div>
+        <!-- image -->
+        <img src="{{pathIMG+creation.image}}" alt="">
+      </div>
+      <!-- div pour créer un espace -->
+
+      <div class="col col-12-12 last">
+        <p> </p>
+      </div>
+      <div class="clear"> </div>
+      <div>
+        <div class="col col-2-12">
+          <p> </p>
+        </div>
+        <!-- On crée un texte qui sera présent dans chaques pages que je met au centre via 1 div de 2 colonnes vide
+         de chaque coté de mon texte , il s'agit d'un disclaimer concernant l'abus d'alcool vu que je parle d'alcool sur mon site -->
+        <div class="col col-8-12">
+          <div class="alcool2">
+            <p> ATTENTION L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ </p>
+          </div>
+        </div>
+
+        <div class="col col-2-12 last">
+          <p> </p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+#area-c2-r2-ct {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#div-button {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#reset {
+  grid-column: 3;
+}
+
+/*----Section Contact----*/
+#section-ct {
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 740px;
+}
+
+#section-ct h1 {
+  grid-column: 1/4;
+}
+
+.textform {
+  font-family: 'Lato', sans-serif;
+
+}

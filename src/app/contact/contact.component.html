@@ -1,0 +1,84 @@
+<html>
+<body>
+
+<main>
+  <section>
+    <div class="col col-12-12 last">
+
+      <p></p>
+
+    </div>
+    <div class="col col-12-12 last">
+      <H2 class="cocktail"> COCKTAILS DE FRUITS </H2>
+    </div>
+    <div class="col col-1-12">
+      <h4>C<bR>O<br>N<br>T<br>A<br>C<br>T</h4>
+      <p> </p>
+    </div>
+    <div class="col col-2-12">
+
+      <p></p>
+
+    </div>
+    <div class="col col-6-12">
+      <div class="container">
+
+        <section id="section-ct" class="center dpl-grid">
+          <div *ngIf='formSucces'>
+            <p class="textform">Message envoyé</p>
+
+          </div>
+
+          <div *ngIf='!formSucces && formSubmit'>
+            <p class="textform"> Erreur dans le formulaire</p>;
+          </div>
+
+          <div id="area-c2-r2-ct">
+
+
+            <form (ngSubmit)="onFormSubmit()" class="bk-trp center" #userForm="ngForm" *ngIf="!formSucces">
+              <div class="form-element">
+                <label for="nom">Nom
+                </label>
+                <br>
+                <input type="text" [ngClass]="{'is-valid': this.Message.name && !isNameValid()}" [(ngModel)]="Message.name" name="nom" id="nom" required>
+              </div>
+
+              <div class="form-element">
+                <label for="email">
+                  Adresse Mail
+                </label>
+                <br>
+                <input type="email" [ngClass]="{'is-valid': this.Message.email && !isEmailValid()}" [(ngModel)]="Message.email" name="email" id="email" required>
+              </div>
+              <div class="form-element">
+                <label for="messages">
+                  Message
+                </label>
+                <br>
+                <textarea [ngClass]="{'is-valid': this.Message.message && !isMessageValid()}" [(ngModel)]="Message.message" name="message" id="messages"  cols="20" rows="10" required></textarea>
+              </div>
+
+              <div id="div-button" class="dpl-grid form-element">
+                <button id="submitted" type="submit" [disabled]="!isFormValid()">Envoyer</button>
+                <button name="reset" id="reset" (click)="resetUserForm(userForm)">Effacer</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+    <div class="col col-3-12 last">
+
+      <p></p>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
+

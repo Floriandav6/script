@@ -1,0 +1,154 @@
+<html>
+<body>
+<main>
+  <section>
+<div class="col col-12-12 last">
+  <p> </p>
+</div>
+<!-- titre h2 avec une classe pour lui donner des instructions différentes du h2 présent dans le header -->
+
+<div class="col col-12-12 last">
+  <H2 class="cocktail"> COCKTAILS DE FRUITS </H2>
+</div>
+<!-- j'utilise régulièrement une div class clear pour nettoyer le float et avoir un meilleur rendu -->
+<div class="clear"> </div>
+<!-- un deuxième titre qui changera en fonction de la page avec <br> pour le renvoi à la ligne -->
+<div>
+  <div class="col col-1-12">
+    <h3>C<bR>O<br>U<br>L<br>E<br>U<br>R<br>S<br> </h3>
+    <p> </p>
+  </div>
+  <!-- création de deux textes de 4 colonnes chacun avec un espace de 2 colonnes entre eux -->
+  <!-- 1er texte et  je crée une div dans la div où je mets ma balise p afin de mieux la manipuler dans mon css -->
+  <div class="col col-4-12">
+    <div class="text1">
+      <p> Qu'y a-t-il de plus rafraîchissant en terme d'aliment qu'un bon fruit?  </p>
+    </div>
+  </div>
+  <div class="col col-2-12">
+    <p> </p>
+  </div>
+  <!-- second texte et je crée  aussi une div dans la div où je mets ma balise p afin de mieux la manipuler dans mon css -->
+  <div class="col col-4-12">
+    <div class="text1">
+      <p> Qui par un beau soleil d'été peut refuser un bon cocktail bien frais?
+      </p>
+    </div>
+  </div>
+  <div class="col col-1-12 last">
+    <p> </p>
+    <!-- div pour créer un espace -->
+  </div>
+  <div class="col col-12-12 last">
+    <p> </p>
+  </div>
+  <div class="clear"> </div>
+</div>
+<div class="clear"> </div>
+<div>
+  <div class="col col-4-12">
+    <p> </p>
+
+  </div>
+  <!-- On crée un 3ème texte de 4 colonnes que je met au centre via 1 div de 4 colonnes vide de chaque coté de mon texte,
+    je crée encore une fois une div dans la div où je mets ma balise p afin de mieux la manipuler dans mon css-->
+  <div class="col col-4-12">
+    <div class="text1" id="rectangle">
+      <p> En conclusion le mariage des fruits et des coktails ne peut donc être qu'une réussite.
+        C'est ce que je vous propose de découvrir via 4 produits que j'ai décidé de mettre en valeur.
+        Chacun étant lui même associé à sa couleur.</p>
+    </div>
+  </div>
+
+  <div class="col col-4-12 last">
+    <p> </p>
+  </div>
+
+</div>
+<div class="clear"> </div>
+<!-- div pour créer un espace -->
+<div class="col col-12-12 last">
+  <p> </p>
+</div>
+<div class="clear"> </div>
+<div>
+  <div class="col col-2-12">
+    <p> </p>
+  </div>
+  <!-- On crée un texte qui sera présent dans chaques pages que je met au centre via 1 div de 2 colonnes vide
+  de chaque coté de mon texte , il s'agit d'un disclaimer concernant l'abus d'alcool vu que je parle d'alcool sur mon site -->
+  <div class="col col-8-12">
+    <div class="alcool1">
+      <p> ATTENTION L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ </p>
+    </div>
+  </div>
+
+  <div class="col col-2-12 last">
+    <p> </p>
+  </div>
+
+</div>
+<!-- div pour créer un espace -->
+<div class="col col-12-12 last">
+  <p> </p>
+</div>
+<div class="clear"> </div>
+<div>
+  <!-- Ici il y'aura 4 divs ( représentant les 4 couleurs ) de 3 colonnes , dans lesquelles seront présent : une image et
+   un texte en adéquation avec qui renverront en cliquant dessus à la page concernée , dans chaque div de 3 colonnes,
+   je crée une autre div pour y mettre mon p afin de plus facilement travailler le texte dans le css  -->
+
+  <!-- chaque image a également une classe pour la manipuler dans le css-->
+
+  <!-- 1ère div couleur bleu -->
+  <div class="col col-3-12">
+    <a routerLink="/bleu">
+      <img src="./assets/images/myrtille.jpg" alt="fruit" class="fruit">
+
+      <div class="text2">
+        <p> MYRTILLE </p>
+      </div>
+    </a>
+
+  </div>
+  <!-- 2ème div couleur jaune -->
+  <div class="col col-3-12">
+    <a routerLink="/jaune">
+      <img src="./assets/images/citron.jpg" alt="fruit" class="fruit">
+
+      <div class="text3">
+        <p> CITRON </p>
+      </div>
+    </a>
+
+  </div>
+  <!-- 3ème div couleur rouge -->
+  <div class="col col-3-12">
+    <a routerLink="/rouge">
+      <img src="./assets/images/straw.jpg" alt="fruit" class="fruit">
+
+      <div class="text2">
+        <p> FRAISE </p>
+      </div>
+    </a>
+
+  </div>
+  <!-- 4ème div couleur verte -->
+  <div class="col col-3-12 last ">
+    <a routerLink="/vert">
+      <img src="./assets/images/kiwi1.jpg" alt="fruit" class="fruit">
+
+      <div class="text3">
+        <p> KIWI </p>
+
+      </div>
+    </a>
+
+  </div>
+</div>
+
+  </section>
+</main>
+
+</body>
+</html>

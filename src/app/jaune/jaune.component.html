@@ -1,0 +1,132 @@
+<html>
+<body>
+<main>
+  <section>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <!-- titre h2 avec une classe pour lui donner des instructions différentes du h2 présent dans le header -->
+
+    <div class="col col-12-12 last">
+      <H2 class="cocktail"> COCKTAILS DE FRUITS </H2>
+    </div>
+    <div class="clear"> </div>
+    <div>
+      <!-- un deuxième titre qui changera en fonction de la page avec <br> pour le renvoi à la ligne, citron ici -->
+
+      <div class="col col-1-12">
+        <h4>C<bR>I<br>T<br>R<br>O<br>N<br> </h4>
+        <p> </p>
+      </div>
+      <!-- chaque image a également une classe pour la manipuler dans le css-->
+      <!-- je crée donc ici une div de 3 colonnes pour y intégrer une image -->
+      <div class="col col-3-12">
+        <img src="assets/images/citron1.jpg" alt="lemon1" class="lemon">
+      </div>
+      <!-- ici la div créée est de 4 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où
+      je mets ma balise p afin de mieux la manipuler dans mon css -->
+      <div class="col col-4-12">
+        <div class="text6">
+          <p>Fruit du citronnier, cet agrume, aussi appelé lime, possède une écorce plus ou moins épaisse, qui
+            peut être jaune ou verte. Sa pulpe acide et juteuse se divise en quartiers. Il est disponible toute
+            l'année grâce aux importations venant d'Espagne et de Floride. C'est la pleine saison de la dégustation
+            du citron en juin et septembre.
+
+          </p>
+        </div>
+      </div>
+      <!-- je crée donc ici une div de 3 colonnes pour y intégrer une image -->
+      <div class="col col-3-12">
+        <img src="assets/images/citron2.jpg" alt="lemon2" class="lemon">
+      </div>
+
+
+      <div class="col col-1-12 last">
+        <p> </p>
+      </div>
+    </div>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <div class="clear"> </div>
+    <div>
+      <div class="col col-2-12">
+        <p> </p>
+      </div>
+      <!-- On crée un texte qui sera présent au centre de la page  via 1 div de 2 colonnes vide de chaque coté de mon texte
+        j'utilise plus ou moins le même principe que pour le disclaimer, c'est pourquoi j'ai utilisé la classe alcool2 -->
+      <div class="col col-8-12">
+        <div class="alcool2">
+          <p> OFFRE RECETTE DE COCKTAIL : 1 + 1 GRATUITE </p>
+        </div>
+      </div>
+
+      <div class="col col-2-12 last">
+        <p> </p>
+      </div>
+    </div>
+    <div class="clear"> </div>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <div class="clear"> </div>
+
+
+    <div *ngFor="let creation of creations">
+      <div class="col col-1-12">
+        <p> </p>
+      </div>
+      <!-- ici la div créée est de 3 colonnes afin de pouvoir y intégrer mon texte, je crée une div dans la div où je mets
+       ma balise p afin de mieux la manipuler dans mon css -->
+      <div class="col col-3-12">
+        <div class="text7">
+          <!-- titre-->
+          <p> {{creation.title }}<br>
+            <br>
+            <!-- link -->
+            {{creation.link}}
+          </p>
+        </div>
+      </div>
+      <!-- on crée donc une div de 4 colonnes ( un peu plus grand que les deux images précédentes pour y intégrer mon image -->
+      <div class="col col-4-12">
+        <!-- image -->
+        <img src="{{pathIMG+creation.image}}"  alt="" class="lemon">
+
+      </div>
+    </div>
+    <!-- div pour créer un espace -->
+    <div class="col col-12-12 last">
+      <p> </p>
+    </div>
+    <div class="clear"> </div>
+    <div>
+      <div class="col col-2-12">
+        <p> </p>
+      </div>
+      <!-- On crée un texte qui sera présent dans chaques pages que je met au centre via 1 div de 2 colonnes vide
+      de chaque coté de mon texte , il s'agit d'un disclaimer concernant l'abus d'alcool vu que je parle d'alcool sur mon site -->
+      <div class="col col-8-12">
+        <div class="alcool2">
+          <p> ATTENTION L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ </p>
+        </div>
+      </div>
+
+      <div class="col col-2-12 last">
+        <p> </p>
+      </div>
+    </div>
+
+
+
+
+
+
+  </section>
+</main>
+
+</body>
+</html>
